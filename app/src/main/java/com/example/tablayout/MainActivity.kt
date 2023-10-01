@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tablayout.adapter.PagerAdapter
 import com.example.tablayout.databinding.ActivityMainBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,5 +19,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun initial() {
         binding.viewPager.adapter = PagerAdapter(this)
+        binding.tabLayout.tabIconTint = null
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) {
+            tab, pos ->
+            when(pos) {
+
+            }
+        }.attach()
     }
 }
