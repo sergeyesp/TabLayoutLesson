@@ -2,6 +2,7 @@ package com.example.tablayout
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.example.tablayout.adapter.PagerAdapter
 import com.example.tablayout.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -23,7 +24,18 @@ class MainActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tabLayout, binding.viewPager) {
             tab, pos ->
             when(pos) {
-
+                0 -> {
+                    tab.setIcon(R.drawable.baseline_anchor_24)
+                    tab.icon?.setTint(ContextCompat.getColor(this, R.color.white))
+                }
+                1 -> {
+                    tab.setIcon(R.drawable.baseline_architecture_24)
+                    tab.icon?.setTint(ContextCompat.getColor(this, R.color.white))
+                }
+                else -> {
+                    tab.setIcon(R.drawable.baseline_deck_24)
+                    tab.icon?.setTint(ContextCompat.getColor(this, R.color.white))
+                }
             }
         }.attach()
     }

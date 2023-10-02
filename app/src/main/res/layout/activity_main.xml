@@ -13,7 +13,11 @@
         app:layout_constraintBottom_toTopOf="@+id/tab_layout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabIndicatorGravity="top"
+        app:tabIndicatorColor="@color/red"
+        app:tabIndicatorHeight="2dp"
+        />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
