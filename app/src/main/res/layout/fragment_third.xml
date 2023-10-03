@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.ThirdFragment"
-    android:background="@color/white">
+    android:background="@color/lemon">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
+        android:text="@string/hello_third_fragment"
         android:textColor="@color/black"
         android:textSize="38sp"
         android:textStyle="bold"

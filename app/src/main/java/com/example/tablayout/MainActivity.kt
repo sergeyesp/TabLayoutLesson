@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.example.tablayout.adapter.PagerAdapter
 import com.example.tablayout.databinding.ActivityMainBinding
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
@@ -31,12 +32,27 @@ class MainActivity : AppCompatActivity() {
                 1 -> {
                     tab.setIcon(R.drawable.baseline_architecture_24)
                     tab.icon?.setTint(ContextCompat.getColor(this, R.color.white))
+                    tab.icon?.alpha = 70
                 }
                 else -> {
                     tab.setIcon(R.drawable.baseline_deck_24)
                     tab.icon?.setTint(ContextCompat.getColor(this, R.color.white))
+                    tab.icon?.alpha = 70
                 }
             }
         }.attach()
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                tab.icon?.alpha = 250
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+                tab.icon?.alpha = 70
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+            }
+        })
     }
 }
